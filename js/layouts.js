@@ -4,20 +4,22 @@
 function loMain() {
     resetGame();
 
-    // elements
     let helloDiv = $('<div><h1>'+tr('Spyfall')+'</h1><div class="card-body">'+tr('Spyfall_welcome_txt')+'</div></div>');
     let btn = $('<button class="btn btn-primary form-control padded">'+tr('Host new game')+'</button>')
         .click(function () {loNewGame()});
 
     let gameRulesDiv = $("<div class='card-body'></div>").append(tr("game_rules")).appendTo($("<div class='card'></div>"));
-    $("#mainLayout").empty().append(helloDiv, btn, gameRulesDiv, btn.clone(true));
+    let footer = $("<footer class='text-center'></footer>").append("<div class='container text-muted'></div>").append(
+            "<hr>"
+            , "by <a href='https://bestsiteever.ru/me' target='_blank'>Roman Strakhov</a> with &#9829; "
+            , "<a href='https://github.com/Roman-/spyfall' target='_blank'>source on Github</a>");
+    $("#mainLayout").empty().append(helloDiv, btn, gameRulesDiv, btn.clone(true), footer);
 }
 
 // show new game layout
 function loNewGame() {
     let loNewGame = $("<div></div>");
 
-    // players
     loNewGame.append(makePlayersList());
     loNewGame.append(additionalSettingsDiv());
     loNewGame.append(startGameButton());
