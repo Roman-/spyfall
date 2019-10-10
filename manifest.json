@@ -1,0 +1,16 @@
+{
+  "name": "Spyfall mobile - portable version of \"Spyfall\" game!",
+  "short_name": "Spyfall",
+  "theme_color": "#ffe7d6",
+  "background_color": "#000000",
+  "display": "standalone",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "img/logo.png",
+      "sizes": "48x48",
+      "type": "image/png"
+    }
+  ],
+  "splash_pages": null
+}
