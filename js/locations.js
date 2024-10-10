@@ -20,6 +20,13 @@ Glob.lociPacks = [
         lociList: [ "Beach", "Broadway Theater", "Casino", "Circus Tent", "Bank", "Day Spa", "Hotel", "Restaurant", "Supermarket", "Service Station", "Hospital", "Embassy", "Military Base", "Police Station", "School", "University", "Airplane", "Ocean Liner", "Passenger Train", "Submarine", "Cathedral", "Corporate Party", "Movie Studio", "Pirate Ship", "Polar Station", "Space Station"
         ]
     },
+    {
+        lang:        "nl",
+        name:        "Standaard in Nederlands",
+        description: "Standard spellocaties",
+        lociList: [ "Strand", "Theater", "Casino", "Circustent", "Bank", "Spa", "Hotel", "Restaurant", "Supermarkt", "Snelwegsrestaurant", "Ziekenhuis", "Ambassade", "Militaire Basis", "Politie Station", "Basisschool", "Universiteit", "Vliegtuig", "Cuiseschip", "Passagiers Trein", "Onderzeeër", "Kathedraal", "Feestje", "Filmstudio", "Piratenschip", "Polair station", ""
+        ]
+    },
 ];
 
 // temp return current locations list
