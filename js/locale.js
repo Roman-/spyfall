@@ -39,7 +39,7 @@ Glob.localeMap = {
     },
     "Who are you?": {
         "ru": "Кто Вы?",
-        "nl": "Wie bent je?",
+        "nl": "Wie ben je?",
         "en": "Who are you?",
     },
     "Click on your name and get ready.": {
