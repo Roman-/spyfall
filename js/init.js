@@ -69,11 +69,24 @@ function initMenu() {
             loMain();
     });
 
-    let langText = (Glob.currentLocale == 'ru') ? "English version" : "Версия на русском";
-    $("#menuLanguage").html(langText).click(function () {
+    $("#langru").html("русская версия").click(function () {
         if ((Glob.setup === null) || confirm(tr("Leave this game?")))
-            toggleLanguage();
+            Glob.currentLocale = 'ru';
+            toggleLanguage('ru');
     });
+
+    $("#langen").html("English version").click(function () {
+        if ((Glob.setup === null) || confirm(tr("Leave this game?")))
+            Glob.currentLocale = 'en';
+            toggleLanguage('en');
+    });
+
+    $("#langnl").html("Nederlandse versie").click(function () {
+        if ((Glob.setup === null) || confirm(tr("Leave this game?")))
+            Glob.currentLocale = 'nl';
+            toggleLanguage('nl');
+    });
+    
 }
 
 // switching Glob.nightMode value to opposite and re-draws interface
@@ -83,14 +96,14 @@ function toggleNightMode() {
     applyDayNightMode();
 }
 
-// changes game language TODO add >2 langs support
-function toggleLanguage() {
-    Glob.currentLocale = (Glob.currentLocale == 'ru' ? 'en' : 'ru');
+function toggleLanguage(language) {
+    Glob.currentLocale = language;
     if (saveLocal('Glob.currentLocale', Glob.currentLocale))
         location.reload();
     else
         alert("Cant change language")
 }
+
 
 // depending on Glob.nightMode, makes interface dark or light
 function applyDayNightMode() {
